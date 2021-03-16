@@ -10,12 +10,13 @@ You can pull from Quay.io:
 
 ```terminal
 podman pull quay.io/rhjhunt/vale
+```
 
 You can also build your own:
 
 ```terminal
 git clone https://github.com/rhjhunt/vale.git
-cd vale 
+cd vale
 buildah bud -t vale .
 ```
 
@@ -24,7 +25,8 @@ buildah bud -t vale .
 You can run the container interactively with the following command.
 
 ```terminal
-podman run --rm -it --volume "${HOME}:${HOME}:rslave" --env "HOME=${HOME}" --security-opt label=disable --workdir "$(pwd)" quay.io/rhjhunt/vale:latest
+podman run --rm -it --volume "${HOME}:${HOME}:rslave" --env "HOME=${HOME}" \
+--security-opt label=disable --workdir "$(pwd)" quay.io/rhjhunt/vale:latest
 ```
 
 Or create an alias in your _~/.bashrc_ file.
