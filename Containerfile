@@ -9,7 +9,7 @@ LABEL   name="vale" \
         run="podman run --rm -it --volume ${HOME}:${HOME}:rslave --env HOME=${HOME} \
              --workdir $(pwd) --security-opt label=disable quay.io/rhjhunt/vale:latest"
 
-RUN microdnf install -y --setopt install_weak_deps=0 --nodocs install ruby ruby-devel && \
+RUN microdnf install -y --setopt install_weak_deps=0 --nodocs ruby ruby-devel && \
     microdnf clean all --enablerepo='*' && \
     gem install --no-document asciidoctor
 
