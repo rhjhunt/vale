@@ -1,7 +1,7 @@
 FROM registry.access.redhat.com/ubi9-minimal
 
 LABEL   name="vale" \
-        version="2.20.2" \
+        version="2.24.0" \
         architecture="x86_64" \
         vcs-type="git" \
         summary="A syntax-aware linter for prose built with speed and extensibility in mind." \
